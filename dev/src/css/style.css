@@ -1,0 +1,258 @@
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+.holder {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    left: 50%;
+    width: calc(100vh * 1920 / 1080);
+    height: 100%;
+    background: url(../image/background.png) center center no-repeat #0066FF;
+    background-size: auto 100%;
+    transform: translateX(-50%);}
+
+    .holder * {
+        /*font-family: novem;*/
+        font-family: VCR_OSD_MONO;
+        /*font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;*/
+        font-size: 3vh;
+        font-weight: bold;
+        color: yellow;}
+
+    .holder > .cloth {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 1;
+        transition: opacity 1000ms;}
+
+        .cloth.hide {
+            opacity: 0;}
+
+        .cloth.remove {
+            display: none;}
+
+    .holder .btn_short {
+        position: absolute;
+        padding: 0 1vh;
+        width: calc(145 / 1080 * 100vh - 2vh);
+        height: calc(100 / 1080 * 100vh);
+        background: url(../image/btn_short.png) 50% 0 no-repeat transparent;
+        background-size: 100% calc(200 / 1080 * 100vh);
+        text-align: center;}
+
+        .btn_short * {
+            transition: color 250ms;}
+
+    .holder .locked { /* for buttons */
+        background-position-y: 100%;}
+
+        .locked * {
+            color: red;}
+
+    .canvasHolder {
+        position: absolute;
+        left: calc(300 / 1920 * 100%);
+        top: calc(0 / 1080 * 100%);
+        width: calc(1020 / 1920 * 100%);
+        height: calc(1080 / 1080 * 100%);}
+
+    .msgHolder {
+        position: absolute;
+        left: calc(345 / 1920 * 100%);
+        top: calc(820 / 1080 * 100%);
+        width: calc(730 / 1920 * 100%);
+        height: calc(150 / 1080 * 100%);}
+
+        .msgHolder > .msg {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-color: #0066FF;
+            transition: opacity 1000ms;}
+
+            .msg * {
+                text-align: center;}
+
+        .msgHolder > .msg.show {
+                z-index: 2;
+                opacity: 1;}
+
+        .msgHolder > .msgPlayGame * {
+            font-size: 5vh;
+            color: white;}
+
+        .msgHolder > .msgGoodLuck * {
+            font-size: 7vh;
+            color: white;}
+
+        .msgHolder > .msgOption > .btn_short {
+            top: calc(25 / 1080 * 100vh);}
+
+            .msgOption > .btn_short:first-child {
+                left: calc(10 / 1080 * 100vh);}
+
+            .msgOption > .msgOptionText {
+                position: absolute;
+                left: calc(155 / 1080 * 100vh);
+                top: 0;
+                width: calc(420 / 1080 * 100vh);
+                height: calc(150 / 1080 * 100vh);}
+
+                .msgOptionText * {
+                    font-size: 3vh;
+                    font-weight: bold;
+                    color: white;}
+
+            .msgOption > .btn_short:nth-child(3) {
+                right: calc(10 / 1080 * 100vh);}
+
+        .msgHolder > .msgWinner {
+
+            }
+
+            .msgWinner > .msgWinnerTitle {
+                width: 50%;
+                height: 100%;}
+
+                .msgWinnerTitle * {
+                    font-size: 7vh;
+                    color: red;}
+
+            .msgWinner > .msgWinnerAmount {
+                position: absolute;
+                right: 0;
+                top: 0;
+                border: 0;
+                padding: 0 0.5vh 0 0;
+                width: 50%;
+                height: 100%;
+                background-color: transparent;
+                font-size: 7vh;
+                text-align: right;
+                color: white;}
+
+    .stateHolder {
+        position: absolute;
+        right: calc(300 / 1080 * 100vh);
+        top: calc(30 / 1080 * 100vh);
+        width: calc(300 / 1080 * 100vh);
+        height: calc(970 / 1080 * 100vh);}
+        
+        .stateHolder > .stateTitle {
+            position: absolute;
+            padding: 0.5vh;
+            width: calc(290 / 1080 * 100vh - 1vh);
+            height: calc(45 / 1080 * 100vh - 1vh);}
+
+            .stateTitle div {
+                color: #00FFFF;}
+    
+            .stateTitle > input {
+                position: absolute;
+                right: 0;
+                top: 0;
+                border: 0;
+                padding: 0 0.5vh 0 0;
+                width: 50%;
+                height: 100%;
+                background-color: transparent;
+                text-align: right;
+                will-change: content;
+                transform: translateZ(0);}
+
+        .textCash {
+            left: calc(5 / 1080 * 100vh);
+            top: calc(110 / 1080 * 100vh);}
+
+            .textCash div {
+                color: red;}
+
+        .textBet {
+            left: calc(5 / 1080 * 100vh);
+            top: calc(160 / 1080 * 100vh);}
+        
+        .textRaise {
+            left: calc(5 / 1080 * 100vh);
+            top: calc(210 / 1080 * 100vh);}
+
+        .textWins {
+            left: calc(5 / 1080 * 100vh);
+            top: calc(260 / 1080 * 100vh);}
+
+        .textPicks {
+            left: calc(5 / 1080 * 100vh);
+            top: calc(515 / 1080 * 100vh);}
+
+        .btnHelp {
+            left: calc(5 / 1080 * 100vh);
+            top: calc(5 / 1080 * 100vh);}
+
+        .btnExit {
+            position: absolute;
+            left: calc(150 / 1080 * 100vh);
+            top: calc(5 / 1080 * 100vh);}
+
+        .btnWipeCard {
+            position: absolute;
+            left: calc(5 / 1080 * 100vh);
+            top: calc(310 / 1080 * 100vh);}
+
+        .btnQuickPick {
+            position: absolute;
+            left: calc(5 / 1080 * 100vh);
+            top: calc(410 / 1080 * 100vh);}
+
+        .btnBetUp {
+            position: absolute;
+            left: calc(150 / 1080 * 100vh);
+            top: calc(310 / 1080 * 100vh);}
+
+        .btnBetDown {
+            position: absolute;
+            left: calc(150 / 1080 * 100vh);
+            top: calc(410 / 1080 * 100vh);}
+   
+        .payTableTitle {
+            left: calc(5 / 1080 * 100vh);
+            top: calc(565 / 1080 * 100vh);}
+
+            .payTableTitle > div {
+                float: right;
+                width: calc(100 / 1080 * 100vh);
+                text-align: center;}
+            
+            .payTableTitle > div:first-child {
+                float: left;
+                width: calc(60 / 1080 * 100vh);}
+
+            .payTableTitle > div:nth-child(1) div {
+                color: red;}
+                
+            .payTableTitle > div:nth-child(2) div {
+                color: yellow;}
+                    
+            .payTableTitle > div:nth-child(3) div {
+                color: yellow;}
+
+        .btnPlayGame {
+            position: absolute;
+            left: calc(5 / 1080 * 100vh);
+            bottom: calc(5 / 1080 * 100vh);
+            padding: 0 1vh;
+            width: calc(290 / 1080 * 100vh - 2vh);
+            height: calc(100 / 1080 * 100vh);
+            background: url(../image/btn_long.png) 50% 0 no-repeat transparent;
+            background-size: 100% calc(200 / 1080 * 100vh);
+            text-align: center;}

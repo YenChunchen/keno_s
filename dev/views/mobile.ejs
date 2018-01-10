@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KENO - VIEW</title>
+    <style>
+        html, body, img {
+            width: calc(1920 / 1080 * 100vh);
+            height: calc(100vh);
+            background-color: #3399FF;
+        }
+    </style>
+</head>
+<body>
+    <img src="../image/view_mobile.png">
+    <script>
+        document.querySelector('img').addEventListener('click', function() {
+
+            document.body.webkitRequestFullscreen();;
+        });
+    </script>
+</body>
+</html>
